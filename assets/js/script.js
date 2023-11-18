@@ -1,7 +1,7 @@
 // var past = 
 // var present =
 // var future =
-// var savebtn =
+var savebtn = "save";
 
 
   // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
@@ -15,11 +15,10 @@
     // time-block containing the button that was clicked? How might the id be
     // useful when saving the description in local storage?
     //event listener to proceed to the questions
-    saveBtn.addEventListener('click', function (event) {
-      if (event.target.matches('button'));
-      timeBlock();
-      saveDescription();
-    });
+//     saveBtn.addEventListener('click', trigger () {
+//       if (.trigger.target.matches('button'));
+// // nothing is working
+//     });
 
 
   //
