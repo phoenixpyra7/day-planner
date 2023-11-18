@@ -4,7 +4,9 @@
 var savebtn = "save";
 var currentDay = dayjs();
 var currentHour = dayjs().hour();
-
+var pastTime =timeBlock.row.past();
+var presentTime = timeBlock.row.present();
+var futureTime = timeBlock.row.future();
 
   // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
   // the code isn't run until the browser has finished rendering all the elements
