@@ -20,6 +20,28 @@ $(document).ready(function () { //Wrapped code to interact with the DOM
         // console.log("button",$(this)) - confirmed works
     })
 })
+
+document.getElementById("save").on("click", function () {  // adding a save to local is not working.
+    var textArea = document.getElementById("textarea").value;
+    localStorage.setItem("textarea",);
+    alert("Saved Planner");
+    console.log("Saved Planner")
+}, false);
+
+document.getElementById("reload").on("click", function () {
+    document.getElementById("textarea").value = localStorage.getItem("textarea");
+    alert("Reloaded Planner");
+    console.log("Reloaded Planner")
+}, false);
+
+//reload last session
+// document.getElementById("reload").addEventListener("click", function ()
+//     {
+//         document.getElementById("todo").value ='Your code';
+//         alert("Reloaded To-Do List") ;
+//         console.log("Reloaded To-Do List")
+//     } , false);
+
 // console.log("global",$(this)) - confirmed works
 //How can Day.js be used to get the current hour in 24-hour time?
 //var currentHour = dayjs().hour(); 
