@@ -6,7 +6,7 @@ $(document).ready(function () { //Wrapped code to interact with the DOM
     var currentHour = dayjs().hour();
     $(".time-block").each(function () { //used time block from html, 
         var blockHour = parseInt($(this).attr("id").split("-")[1]); // parse Int to round to whole, split hour from the 9 ref html
-        console.log(currentHour + blockHour);
+        // console.log(currentHour + blockHour);
         if (currentHour > blockHour) { // if current time from the block time is grtr than current time
             $(this).addClass("past") // then it is considered the past
         } else if (currentHour === blockHour) { // otherwise if the current time is same as block time
@@ -15,24 +15,29 @@ $(document).ready(function () { //Wrapped code to interact with the DOM
             $(this).addClass("future") // then its considered the future
         }
     })
+
+    $(".saveBtn").on("click", function () {  // adding a save to local is not working.
+        var textArea = $(this).prev().val(); 
+        var blockHour = ($(this).attr("id"));
+        console.log(blockHour);
+        // console.log("Hello");
+        console.log(textArea);
+        // localStorage.setItem("textarea",);
+        console.log("Saved Planner")
+    });
     // console.log("DOM",$(this)); - confirmed works
-    $(".saveBtn").on("click", function () { //added event listener to save user info to local.client side storage.
-        // console.log("button",$(this)) - confirmed works
-    })
+    // $(".saveBtn").on("click", function () { //added event listener to save user info to local.client side storage.
+    //     // console.log("button",$(this)) - confirmed works
+    // })
 })
 
-document.getElementById("save").on("click", function () {  // adding a save to local is not working.
-    var textArea = document.getElementById("textarea").value;
-    localStorage.setItem("textarea",);
-    alert("Saved Planner");
-    console.log("Saved Planner")
-}, false);
 
-document.getElementById("reload").on("click", function () {
-    document.getElementById("textarea").value = localStorage.getItem("textarea");
-    alert("Reloaded Planner");
-    console.log("Reloaded Planner")
-}, false);
+
+// document.getElementById("reload").on("click", function () {
+//     document.getElementById("textarea").value = localStorage.getItem("textarea");
+//     alert("Reloaded Planner");
+//     console.log("Reloaded Planner")
+// }, false);
 
 //reload last session
 // document.getElementById("reload").addEventListener("click", function ()
