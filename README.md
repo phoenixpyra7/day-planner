@@ -11,4 +11,4 @@ This is a basic work day planner, the user can add a meeting in the time slot an
 
 ## Link 
 
-Live URL: https
+Live URL: https://phoenixpyra7.github.io/work-day-planner/ 
