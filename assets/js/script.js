@@ -21,7 +21,7 @@ $(document).ready(function () { //Wrapped code to interact with the DOM
         // console.log(blockHourId)
     })
 
-    $(".saveBtn").on("click", function () {  // adding a save to local is not working.
+    $(".saveBtn").on("click", function () {  //added listener for save button and to save info to local storage
         var textArea = $(this).prev().val();
         var blockHourId = $(this).parent().attr("id");
         // console.log(blockHour);
@@ -30,20 +30,8 @@ $(document).ready(function () { //Wrapped code to interact with the DOM
         localStorage.setItem(blockHourId, textArea);
         // console.log("Saved Planner")
     })
-
-
-    //var userStr = localStorage.getItem('user');
-    // console.log("DOM",$(this)); - confirmed works
-    // $(".saveBtn").on("click", function () { //added event listener to save user info to local.client side storage.
-    //     // console.log("button",$(this)) - confirmed works
-    // })
 })
 
-
-
-// console.log("global",$(this)) - confirmed works
-//How can Day.js be used to get the current hour in 24-hour time?
-//var currentHour = dayjs().hour(); 
 
 
 
